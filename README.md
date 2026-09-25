@@ -106,8 +106,9 @@
 | `LyraNest-Photo-TV-0.1.0-armeabi-v7a.apk` | Android TV / 电视盒子（ARM32） |
 | `LyraNest-Photo-TV-Android5-0.1.0-arm64.apk` | Android 5.0 电视 / 老盒子（ARM64，兼容版） |
 | `LyraNest-Photo-TV-Android5-0.1.0-arm.apk` | Android 5.0 电视 / 老盒子（ARM32，兼容版） |
-| `LyraNest-Photo-0.1.0-ios-unsigned.ipa` | iPhone / iPad（**无签名**，需自行侧载） |
-| `LyraNest-Photo-0.1.0-macos-unsigned.zip` | macOS（**无签名**，解压后需移除隔离标记） |
+| `LyraNest-Photo-0.1.0-ios-arm64.ipa` | iPhone / iPad（**无签名**，需自行侧载） |
+| `LyraNest-Photo-0.1.0-macos-universal.dmg` | macOS 磁盘映像（**无签名**，Apple 芯片与 Intel 通用） |
+| `LyraNest-Photo-0.1.0-macos-universal.zip` | macOS 压缩包（**无签名**，与 dmg 内容相同） |
 
 > ⚠️ `ios` 与 `macos` 附件是**无签名构建**：iOS 需要你用侧载工具自签安装，macOS 首次打开需要手动放行，详见 [安装与使用](#安装与使用)。下载前请先看清文件名中的平台与架构。
 
@@ -133,7 +134,7 @@
 
 > 该版本**不做代码签名，也不在 App Store 上架**，需要你自己完成签名与安装。这不是安装包损坏。
 
-1. 下载 `LyraNest-Photo-<版本>-ios-unsigned.ipa`。
+1. 下载 `LyraNest-Photo-<版本>-ios-arm64.ipa`。
 2. 用 AltStore、Sideloadly 等侧载工具，配合你自己的 Apple ID 重签后安装到设备。
 3. 需要知道的限制：
    - 用免费 Apple ID 签名时，应用 **7 天后会失效**，需要重新签名安装；
@@ -144,7 +145,7 @@
 
 > 该版本**未签名、未公证**，macOS 首次打开会提示「已损坏」或「无法验证开发者」，这是预期现象，不代表文件有问题。
 
-1. 下载 `LyraNest-Photo-<版本>-macos-unsigned.zip`，解压得到应用。
+1. 下载 `LyraNest-Photo-<版本>-macos-universal.dmg`（打开后把应用拖进「应用程序」），或 `LyraNest-Photo-<版本>-macos-universal.zip`（解压得到应用）。两者内容相同，按习惯选一个即可。
 2. 首次打开：右键点击应用 → **打开** → 在弹窗中再次确认；或者执行下面的命令移除隔离标记：
 
    ```bash
@@ -172,8 +173,8 @@ HarmonyOS NEXT 客户端正在开发，尚未发布。完成后会在本仓库�
 | Windows 桌面端 | —（`lyranest_photo.exe`） | x64 | Windows 10 x64 |
 | 律巢相册 TV | `com.lyranest.phototv` | arm64-v8a、armeabi-v7a | Android 7.0（API 24） |
 | 律巢相册 TV 兼容版 | `com.lyranest.phototv.android5` | armeabi-v7a、arm64-v8a | Android 5.0（API 21） |
-| iOS / iPadOS（无签名） | `com.lyranest.photo` | arm64 | 以对应 Release 说明为准 |
-| macOS（无签名） | `com.lyranest.photo` | Apple 芯片、Intel | 以对应 Release 说明为准 |
+| iOS / iPadOS（无签名） | `com.lyranest.photo` | arm64 | iOS 13.0 及以上 |
+| macOS（无签名） | `com.lyranest.photo` | Apple 芯片、Intel（通用） | macOS 10.15 及以上 |
 | HarmonyOS NEXT | — | — | 开发中，敬请期待 |
 
 **服务端要求**：一台已安装并启用官方相册的飞牛 fnOS 设备，客户端通过你平时打开飞牛管理界面的地址访问。

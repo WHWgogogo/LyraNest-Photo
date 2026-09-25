@@ -43,8 +43,8 @@
 | Windows 桌面端 | `lyranest_photo.exe` | x64 | Windows 10 x64 |
 | 律巢相册 TV | `com.lyranest.phototv` | arm64-v8a、armeabi-v7a | Android 7.0（API 24） |
 | 律巢相册 TV 兼容版 | `com.lyranest.phototv.android5` | armeabi-v7a、arm64-v8a | Android 5.0（API 21） |
-| iOS / iPadOS（无签名） | `com.lyranest.photo` | arm64 | 以对应 Release 说明为准 |
-| macOS（无签名） | `com.lyranest.photo` | Apple 芯片、Intel | 以对应 Release 说明为准 |
+| iOS / iPadOS（无签名） | `com.lyranest.photo` | arm64 | iOS 13.0 及以上 |
+| macOS（无签名） | `com.lyranest.photo` | Apple 芯片、Intel（通用） | macOS 10.15 及以上 |
 | HarmonyOS NEXT | — | — | 开发中，敬请期待 |
 
 - Windows 桌面端使用无边框窗口与自绘窗口条，支持窗口拖动、最小化、最大化与关闭。
