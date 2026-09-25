@@ -24,7 +24,7 @@
 
 > ### 发行版仓库说明
 >
-> 本仓库用于发布律巢相册的安装包与更新记录：**安装包以 GitHub Release 附件形式提供**，仓库本身只保留文档，不包含任何源代码、构建脚本、接口文档或设计资料。
+> 本仓库**只发布律巢相册的安装包与更新记录**，不包含任何源代码、构建脚本、接口文档或设计资料。
 >
 > 律巢相册是**闭源软件**：源代码不对外开放，也未授权任何个人或组织以任何形式复制、反编译、二次打包、二次分发或用于衍生开发。保留所有权利。
 
@@ -111,18 +111,8 @@
 
 > ⚠️ `ios` 与 `macos` 附件是**无签名构建**：iOS 需要你用侧载工具自签安装，macOS 首次打开需要手动放行，详见 [安装与使用](#安装与使用)。下载前请先看清文件名中的平台与架构。
 
-> 每个版本都保留独立的 GitHub Release 与附件，不会覆盖旧版本。安装包**只作为 Release 附件发布，不进入版本库**，所以本仓库始终只含文档，体积不会随版本增长。
+> 每个版本都保留独立的 GitHub Release 与附件，不会覆盖旧版本。
 > GitHub Release 附件页会显示每个附件的 SHA-256 摘要，可直接用于校验下载文件的完整性。
-
-## 仓库结构
-
-```text
-README.md                       发行说明与下载入口
-releases/<版本>/CHANGELOG.md     该版本的更新日志
-docs/images/                    README 使用的图片
-```
-
-本仓库不含源代码、构建脚本与安装包。源码构建流程产出的安装包（APK / IPA / ZIP）直接上传为对应版本的 GitHub Release 附件，不进版本库。
 
 ## 安装与使用
 
@@ -236,7 +226,7 @@ HarmonyOS NEXT 客户端正在开发中，完成后会在这里同步发布安�
 ## 版本与校验
 
 - 每个版本都保留独立 GitHub Release 与附件，不覆盖历史版本。
-- 安装包只存在于 GitHub Release 附件中，不进入版本库；历史版本请到 [Releases](https://github.com/WHWgogogo/LyraNest-Photo/releases) 页面按版本号查找。
+- 历史版本可在 [Releases](https://github.com/WHWgogogo/LyraNest-Photo/releases) 页面按版本号查找。
 - README 的下载入口使用 GitHub `releases/latest`，始终指向最新稳定发行版。
 - 建议核对 Release 页面展示的 SHA-256 摘要后再安装。
 
