@@ -9,5 +9,8 @@ Thumbs.db
 .vscode/
 *.iml
 
-# 发布附件（APK / ZIP）按版本归档在 releases/<版本>/ 并提交到本仓库，
-# 因此刻意不在这里忽略 *.apk / *.zip。
+# 发布附件不进版本库：安装包只作为 GitHub Release 附件发布，
+# 避免每个版本把几十 MB 的二进制永久写进本地 .git 历史。
+*.apk
+*.ipa
+*.zip
