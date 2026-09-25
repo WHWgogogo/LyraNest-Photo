@@ -43,10 +43,15 @@
 | Windows 桌面端 | `lyranest_photo.exe` | x64 | Windows 10 x64 |
 | 律巢相册 TV | `com.lyranest.phototv` | arm64-v8a、armeabi-v7a | Android 7.0（API 24） |
 | 律巢相册 TV 兼容版 | `com.lyranest.phototv.android5` | armeabi-v7a、arm64-v8a | Android 5.0（API 21） |
+| iOS / iPadOS（无签名） | `com.lyranest.photo` | arm64 | 以对应 Release 说明为准 |
+| macOS（无签名） | `com.lyranest.photo` | Apple 芯片、Intel | 以对应 Release 说明为准 |
+| HarmonyOS NEXT | — | — | 开发中，敬请期待 |
 
 - Windows 桌面端使用无边框窗口与自绘窗口条，支持窗口拖动、最小化、最大化与关闭。
 - Android TV 端为全遥控器可操作的 10-foot 界面，横屏锁定，支持扫码登录。
 - 「TV 兼容版」包名与正式 TV 端不同，可在同一台电视上并存安装，面向 Android 5.0 电视与老盒子。
+- iOS / iPadOS 与 macOS 提供**无签名**版本：iOS 需自行侧载重签安装，macOS 首次打开需手动移除系统隔离标记。
+- HarmonyOS NEXT 客户端正在开发中，尚未发布，敬请期待。
 
 ## 兼容性说明
 

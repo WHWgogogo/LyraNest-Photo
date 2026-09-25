@@ -4,11 +4,13 @@
   <img src="docs/images/lyranest-photo.png" alt="LyraNest Photo" width="150" />
 </p>
 
-<p align="center">把飞牛 fnOS 官方相册，搬到你自己的手机、电脑和电视上。</p>
+<p align="center">把飞牛 fnOS 官方相册，搬到你自己的手机、平板、电脑和电视上。</p>
 
 <p align="center">
   <a href="https://github.com/WHWgogogo/LyraNest-Photo/releases/latest"><img src="https://img.shields.io/github/v/release/WHWgogogo/LyraNest-Photo?display_name=tag&label=Release" alt="Latest Release" /></a>
   <a href="https://github.com/WHWgogogo/LyraNest-Photo/releases/latest"><img src="https://img.shields.io/badge/Platform-Android%20%7C%20Windows%20%7C%20Android%20TV-4f46e5" alt="Platforms" /></a>
+  <a href="https://github.com/WHWgogogo/LyraNest-Photo/releases/latest"><img src="https://img.shields.io/badge/Platform-iOS%20%7C%20macOS-000000?logo=apple&logoColor=white" alt="Apple Platforms" /></a>
+  <a href="#harmonyos-客户端开发中"><img src="https://img.shields.io/badge/HarmonyOS-%E5%BC%80%E5%8F%91%E4%B8%AD-orange" alt="HarmonyOS" /></a>
   <img src="https://img.shields.io/badge/License-Proprietary-red" alt="Proprietary" />
 </p>
 
@@ -30,7 +32,11 @@
 
 交流 QQ 群：`1098566175`
 
+> **HarmonyOS 客户端开发中** —— 鸿蒙端正在开发，敬请期待；完成后会同步在本仓库发布安装包。
+
 律巢相册是你自己飞牛（fnOS）NAS 相册的**第三方独立客户端**。照片和视频始终保存在你自己的 NAS 上，客户端只做浏览、备份与管理，不经由任何第三方服务器中转。
+
+律巢相册提供 Android、Windows、Android TV 以及 **iOS / macOS（无签名，需自行侧载）** 客户端，HarmonyOS NEXT 版本正在开发中。
 
 ## 0.1.0 首发说明
 
@@ -68,6 +74,9 @@
 - **Windows 桌面**：无边框窗口与自绘窗口条，支持窗口拖动、最小化、最大化与关闭。
 - **Android TV**：全遥控器可操作的 10-foot 界面、扫码登录、横屏锁定。
 - **Android TV 兼容版**：独立包名，可与正式 TV 端在同一台电视上并存安装，面向 Android 5.0 电视与老盒子。
+- **iOS / iPadOS**：提供**无签名**版本，需要用户自行侧载安装。
+- **macOS**：提供**无签名**版本，首次打开需手动移除系统隔离标记。
+- **HarmonyOS NEXT**：开发中，敬请期待。
 
 完整记录见 [`releases/0.1.0/CHANGELOG.md`](releases/0.1.0/CHANGELOG.md)。
 
@@ -79,11 +88,11 @@
 - **手机相册备份**：按相册增量备份到 NAS，失败重试与去重台账。
 - **缩略图维护**：批量生成缺失缩略图并跟踪队列进度。
 - **音乐相册**：与 LyraNest 音乐服务联动放映（可选）。
-- **多端覆盖**：Android 手机 / 平板、Windows 桌面、Android TV、Android 5 电视兼容版。
+- **多端覆盖**：Android 手机 / 平板、Windows 桌面、Android TV、Android 5 电视兼容版，以及无签名的 iOS / macOS 版本；HarmonyOS 版本开发中。
 
 ## 界面预览
 
-> 截图整理中，后续版本会在这里补充手机端、Windows 端与 TV 端的实际界面。
+> 截图整理中，后续版本会在这里补充手机端、Windows 端、TV 端与 Apple 端的实际界面。
 
 ## 下载
 
@@ -97,6 +106,10 @@
 | `LyraNest-Photo-TV-0.1.0-armeabi-v7a.apk` | Android TV / 电视盒子（ARM32） |
 | `LyraNest-Photo-TV-Android5-0.1.0-arm64.apk` | Android 5.0 电视 / 老盒子（ARM64，兼容版） |
 | `LyraNest-Photo-TV-Android5-0.1.0-arm.apk` | Android 5.0 电视 / 老盒子（ARM32，兼容版） |
+| `LyraNest-Photo-0.1.0-ios-unsigned.ipa` | iPhone / iPad（**无签名**，需自行侧载） |
+| `LyraNest-Photo-0.1.0-macos-unsigned.zip` | macOS（**无签名**，解压后需移除隔离标记） |
+
+> ⚠️ `ios` 与 `macos` 附件是**无签名构建**：iOS 需要你用侧载工具自签安装，macOS 首次打开需要手动放行，详见 [安装与使用](#安装与使用)。下载前请先看清文件名中的平台与架构。
 
 > 每个版本都保留独立的 GitHub Release 与附件，不会覆盖旧版本。同一份产物也会按版本归档在本仓库的 `releases/<版本>/` 目录中，文件名与 Release 附件完全一致。
 > GitHub Release 附件页会显示每个附件的 SHA-256 摘要，可直接用于校验下载文件的完整性。
@@ -104,10 +117,10 @@
 ## 仓库结构
 
 ```text
-README.md                        发行说明与下载入口
-releases/<版本>/CHANGELOG.md      该版本的更新日志
-releases/<版本>/*.apk / *.zip     该版本的安装包（与 Release 附件同名，按版本归档）
-docs/images/                     README 使用的图片
+README.md                              发行说明与下载入口
+releases/<版本>/CHANGELOG.md            该版本的更新日志
+releases/<版本>/*.apk / *.ipa / *.zip   该版本的安装包（与 Release 附件同名，按版本归档）
+docs/images/                           README 使用的图片
 ```
 
 本仓库不包含任何源代码或构建脚本；每个版本目录下的产物由对应的源码构建流程生成后归档到这里。
@@ -127,12 +140,40 @@ docs/images/                     README 使用的图片
 2. 解压到任意目录（**不要单独把 exe 拖出来**，`data` 目录必须与 exe 同级）。
 3. 运行 `lyranest_photo.exe`，填写 NAS 地址并登录。
 
+### iOS / iPadOS（无签名，需自行侧载）
+
+> 该版本**不做代码签名，也不在 App Store 上架**，需要你自己完成签名与安装。这不是安装包损坏。
+
+1. 下载 `LyraNest-Photo-<版本>-ios-unsigned.ipa`。
+2. 用 AltStore、Sideloadly 等侧载工具，配合你自己的 Apple ID 重签后安装到设备。
+3. 需要知道的限制：
+   - 用免费 Apple ID 签名时，应用 **7 天后会失效**，需要重新签名安装；
+   - 依赖正式签名证书的能力（例如推送通知）在自签版本上不可用；
+   - 侧载与重签的具体步骤取决于你的工具和系统版本，请以所用工具的说明为准。
+
+### macOS（无签名，需自行解除隔离）
+
+> 该版本**未签名、未公证**，macOS 首次打开会提示「已损坏」或「无法验证开发者」，这是预期现象，不代表文件有问题。
+
+1. 下载 `LyraNest-Photo-<版本>-macos-unsigned.zip`，解压得到应用。
+2. 首次打开：右键点击应用 → **打开** → 在弹窗中再次确认；或者执行下面的命令移除隔离标记：
+
+   ```bash
+   xattr -dr com.apple.quarantine /Applications/你的应用名.app
+   ```
+
+3. 若仍被拦截，到「系统设置 → 隐私与安全性」中允许该应用运行。
+
 ### Android TV / 电视盒子
 
 1. 先确认电视的 CPU 架构，再选择 ARM64 或 ARM32 的 TV 安装包；Android 5.0 及更老的设备请选择「兼容版」。
 2. 通过 U 盘或电视端的文件管理器安装 APK。
 3. 律巢相册 TV 与律巢相册 TV 兼容版**包名不同**，可以在同一台电视上并存安装。
 4. 登录方式与手机端一致，也支持扫码授权。
+
+### HarmonyOS 客户端开发中
+
+HarmonyOS NEXT 客户端正在开发，尚未发布。完成后会在本仓库同步提供安装包，敬请期待。
 
 ## 客户端与兼容性
 
@@ -142,6 +183,9 @@ docs/images/                     README 使用的图片
 | Windows 桌面端 | —（`lyranest_photo.exe`） | x64 | Windows 10 x64 |
 | 律巢相册 TV | `com.lyranest.phototv` | arm64-v8a、armeabi-v7a | Android 7.0（API 24） |
 | 律巢相册 TV 兼容版 | `com.lyranest.phototv.android5` | armeabi-v7a、arm64-v8a | Android 5.0（API 21） |
+| iOS / iPadOS（无签名） | `com.lyranest.photo` | arm64 | 以对应 Release 说明为准 |
+| macOS（无签名） | `com.lyranest.photo` | Apple 芯片、Intel | 以对应 Release 说明为准 |
+| HarmonyOS NEXT | — | — | 开发中，敬请期待 |
 
 **服务端要求**：一台已安装并启用官方相册的飞牛 fnOS 设备，客户端通过你平时打开飞牛管理界面的地址访问。
 
@@ -173,6 +217,14 @@ docs/images/                     README 使用的图片
 **TV 上装不上或找不到图标？**
 
 先确认 CPU 架构是否选对；Android 5.0 及更老的设备必须使用「TV 兼容版」。两台 TV 客户端包名不同，可同时安装。
+
+**为什么 iOS / macOS 版本要自己侧载？**
+
+这两个版本是**无签名构建**，没有 Apple 开发者签名与公证，也不在 App Store 上架，所以需要你自己动手一次：iOS 用侧载工具重签安装，macOS 手动移除隔离标记后打开。这样发布的版本不依赖商店审核，更新节奏更自由。
+
+**鸿蒙端什么时候发布？**
+
+HarmonyOS NEXT 客户端正在开发中，完成后会在这里同步发布安装包，敬请期待。
 
 **更新日志在哪里？**
 
