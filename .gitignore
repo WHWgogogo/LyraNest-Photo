@@ -1,0 +1,13 @@
+# 本地临时与系统文件
+*.tmp
+*.log
+Thumbs.db
+.DS_Store
+
+# 编辑器与 IDE
+.idea/
+.vscode/
+*.iml
+
+# 发布附件（APK / ZIP）按版本归档在 releases/<版本>/ 并提交到本仓库，
+# 因此刻意不在这里忽略 *.apk / *.zip。
