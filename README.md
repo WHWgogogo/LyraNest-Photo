@@ -237,6 +237,14 @@ HarmonyOS NEXT 客户端正在开发中，完成后会在这里同步发布安�
 - [律巢相册最新发行版](https://github.com/WHWgogogo/LyraNest-Photo/releases/latest)：本仓库的下载页。
 - [作者主页](https://github.com/WHWgogogo)。
 
+## 赞助支持
+
+如果您觉得 LyraNest Photo 对您有所帮助，欢迎为爱发电，支持项目的持续维护与更新！
+
+<p align="center">
+  <img src="docs/images/sponsor-qrcode.jpg" alt="LyraNest 赞赏码" width="220" />
+</p>
+
 ## 版权声明
 
 Copyright © WHWgogogo. All rights reserved.
